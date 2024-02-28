@@ -22,7 +22,7 @@ $(document).ready(function () {
     var randomQuote = quotes[randomIndex]; // Lấy ra dòng chữ tại index được chọn
 
     // Hiển thị số ngẫu nhiên
-    showQuote.text(randomQuote);
+    showQuote.text(randomQuote.toUpperCase());
 
     // Gỡ bỏ sự kiện click sau khi đã thực thi
     joystick.off("click");
