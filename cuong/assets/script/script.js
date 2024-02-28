@@ -205,7 +205,10 @@ $(".radio-group .radio").click(function () {
   // Kiểm tra xem có class .radio-user hay không
   if ($(this).hasClass("radio-user")) {
     // Nếu có, mở Google
-    window.open("https://www.facebook.com/profile.php?id=100009626745940", "_blank");
+    window.open(
+      "https://www.facebook.com/profile.php?id=100066483925385",
+      "_blank"
+    );
   } else {
     // Nếu không, mở Facebook
     window.open(
