@@ -206,7 +206,7 @@ $(".radio-group .radio").click(function () {
   if ($(this).hasClass("radio-user")) {
     // Nếu có, mở Google
     window.open(
-      "https://www.facebook.com/profile.php?id=100009626745940",
+      "https://www.facebook.com/profile.php?id=100073617101880",
       "_blank"
     );
   } else {
