@@ -1,10 +1,16 @@
 function validate1(val) {
-  v1 = document.getElementById("name");
-  v2 = document.getElementById("email");
-  v3 = document.getElementById("phone");
-  v4 = document.getElementById("school");
-  v5 = document.getElementById("lop");
-  v6 = document.getElementById("content");
+  v1 = document.getElementById("parentName");
+  v2 = document.getElementById("parentEmail");
+  v3 = document.getElementById("parentPhone");
+  v4 = document.getElementById("childName");
+  v5 = document.getElementById("childYob");
+  v6 = document.getElementById("childPhone");
+  v7 = document.getElementById("city");
+  v8 = document.getElementById("school");
+  v9 = document.getElementById("lop");
+ 
+  v10 = document.getElementById("content");
+  v11 = document.getElementById("consultant");
 
   flag1 = true;
   flag2 = true;
@@ -12,6 +18,11 @@ function validate1(val) {
   flag4 = true;
   flag5 = true;
   flag6 = true;
+  flag7 = true;
+  flag8 = true;
+  flag9 = true;
+  flag10 = true;
+  flag11 = true;
 
   if (val >= 1 || val == 0) {
     if (v1.value == "") {
@@ -71,7 +82,66 @@ function validate1(val) {
       flag6 = true;
     }
   }
-  flag = flag1 && flag2 && flag3 && flag4 && flag5 && flag6;
+  if (val >= 7 || val == 0) {
+    if (v7.value == "") {
+      v7.style.borderColor = "red";
+      flag7 = false;
+    } else {
+      v7.style.borderColor = "green";
+      flag7 = true;
+    }
+  }
+
+  if (val >= 8 || val == 0) {
+    if (v8.value == "") {
+      v8.style.borderColor = "red";
+      flag8 = false;
+    } else {
+      v8.style.borderColor = "green";
+      flag8 = true;
+    }
+  }
+
+  if (val >= 9 || val == 0) {
+    if (v9.value == "") {
+      v9.style.borderColor = "red";
+      flag9 = false;
+    } else {
+      v9.style.borderColor = "green";
+      flag9 = true;
+    }
+  }
+
+  if (val >= 10 || val == 0) {
+    if (v10.value == "") {
+      v10.style.borderColor = "red";
+      flag10 = false;
+    } else {
+      v10.style.borderColor = "green";
+      flag10 = true;
+    }
+  }
+  if (val >= 11 || val == 0) {
+    if (v11.value == "") {
+      v11.style.borderColor = "red";
+      flag11 = false;
+    } else {
+      v11.style.borderColor = "green";
+      flag11 = true;
+    }
+  }
+  flag =
+    flag1 &&
+    flag2 &&
+    flag3 &&
+    flag4 &&
+    flag5 &&
+    flag6 &&
+    flag7 &&
+    flag8 &&
+    flag9 &&
+    flag10 &&
+    flag11;
   return flag;
 }
 
@@ -204,8 +274,6 @@ $(".radio-group .radio").click(function () {
 
   // Kiểm tra xem có class .radio-user hay không
   if ($(this).hasClass("radio-user")) {
-    // Nếu có, mở Google
-    window.open("https://www.facebook.com/vietcuong.le.52206", "_blank");
   } else {
     // Nếu không, mở Facebook
     window.open(

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BOATMAN - ĐĂNG KÝ TƯ VẤN DU HỌC</title>
+    
 
     <link
       rel="stylesheet"
@@ -44,22 +45,27 @@
             </div>
 
             <div class="card-body show pt-5">
-              <h4 class="heading mb-4 pb-1">Thông tin cá nhân</h4>
+              <h4 class="heading mb-4 pb-1">Thông tin tư vấn du học</h4>
               <label class="text-danger mb-3">*Bắt buộc</label>
+              <br />
+              <label class="mt-5 mb-2" style="font-weight: 500"
+                >THÔNG TIN PHỤ HUYNH</label
+              >
 
               <form
                 id="myform"
                 method="post"
-                action="https://script.google.com/macros/s/AKfycbzvszKSuWy5uPWuR-ULVONbsTWgu7kt0lp6kVw_Y_ktF2dSn5QhmxLw8T_iLWietji6qA/exec"
+                action="https://script.google.com/macros/s/AKfycby09jyAiqWT-Nl1u8hrA_NZbF00IeOPZic_RQ0jmg1WeVUDA1ZWvt9Bu8OCyc2goHu42w/exec"
               >
                 <div class="form-group">
                   <label class="form-control-label">
-                    <span class="text-danger">*</span>Họ và tên:</label
+                    <span class="text-danger">*</span>Họ và tên phụ
+                    huynh:</label
                   >
                   <input
                     type="text"
-                    id="name"
-                    name="name"
+                    id="parentName"
+                    name="parentName"
                     placeholder=""
                     class="form-control"
                     onblur="validate1(1)"
@@ -71,8 +77,8 @@
                   >
                   <input
                     type="email"
-                    id="email"
-                    name="email"
+                    id="parentEmail"
+                    name="parentEmail"
                     placeholder=""
                     class="form-control"
                     onblur="validate1(2)"
@@ -84,22 +90,25 @@
                   >
                   <input
                     type="number"
-                    id="phone"
-                    name="phone"
+                    id="parentPhone"
+                    name="parentPhone"
                     placeholder=""
                     class="form-control"
                     onblur="validate1(3)"
                   />
                 </div>
+                <label class="mt-5" style="font-weight: 500"
+                  >THÔNG TIN HỌC SINH</label
+                >
                 <div class="form-group">
                   <label class="form-control-label"
-                    ><span class="text-danger">*</span>Trường học hiện
-                    tại:</label
+                    ><span class="text-danger">*</span>Họ và tên học
+                    sinh:</label
                   >
                   <input
                     type="text"
-                    id="school"
-                    name="school"
+                    id="childName"
+                    name="childName"
                     placeholder=""
                     class="form-control"
                     onblur="validate1(4)"
@@ -107,12 +116,12 @@
                 </div>
                 <div class="form-group">
                   <label class="form-control-label"
-                    ><span class="text-danger">*</span>Lớp:</label
+                    ><span class="text-danger">*</span>Năm sinh:</label
                   >
                   <input
-                    type="text"
-                    id="lop"
-                    name="lop"
+                    type="number"
+                    id="childYob"
+                    name="childYob"
                     placeholder=""
                     class="form-control"
                     onblur="validate1(5)"
@@ -121,17 +130,67 @@
 
                 <div class="form-group">
                   <label class="form-control-label"
-                    ><span class="text-danger">*</span>Quốc gia có nhu cầu tư
-                    vấn du học:</label
+                    ><span class="text-danger">*</span>Số điện thoại:</label
                   >
-                  <!-- <input
-                      type="text"
-                      id="content"
-                      name="content"
-                      placeholder=""
-                      class="form-control"
-                      onblur="validate1(5)"
-                    />  -->
+                  <input
+                    type="number"
+                    id="childPhone"
+                    name="childPhone"
+                    placeholder=""
+                    class="form-control"
+                    onblur="validate1(6)"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-control-label"
+                    ><span class="text-danger">*</span>Thành phố đang sinh
+                    sống:</label
+                  >
+                  <input
+                    type="text"
+                    id="city"
+                    name="city"
+                    placeholder=""
+                    class="form-control"
+                    onblur="validate1(7)"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-control-label"
+                    ><span class="text-danger">*</span>Trường học sinh đang theo
+                    học:</label
+                  >
+                  <input
+                    type="text"
+                    id="school"
+                    name="school"
+                    placeholder=""
+                    class="form-control"
+                    onblur="validate1(8)"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-control-label"
+                    ><span class="text-danger">*</span>Lớp hiện tại học sinh
+                    đang theo học (năm học 2023-2024):</label
+                  >
+                  <input
+                    type="text"
+                    id="lop"
+                    name="lop"
+                    placeholder=""
+                    class="form-control"
+                    onblur="validate1(9)"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label class="form-control-label"
+                    >Câu hỏi cần được tư vấn:</label
+                  >
                   <textarea
                     rows="5"
                     type="text"
@@ -139,8 +198,25 @@
                     name="content"
                     placeholder=""
                     class="form-control"
-                    onblur="validate1(5)"
+                    onblur="validate1(10)"
                   ></textarea>
+                </div>
+
+                <label class="mt-5" style="font-weight: 500"
+                  >Tư vấn viên:</label
+                >
+                <div class="form-group">
+                  <label class="form-control-label"
+                    ><span class="text-danger">*</span>Tư vấn viên:</label
+                  >
+                  <input
+                    type="text"
+                    id="consultant"
+                    name="consultant"
+                    placeholder=""
+                    class="form-control"
+                    onblur="validate1(11)"
+                  />
                 </div>
               </form>
               <div class="row justify-content-center">
@@ -153,33 +229,16 @@
             <div class="card-body pt-5">
               <div class="container radio-group">
                 <div class="row justify-content-center">
-                  <div class="col-12 p-0 m-3 radio radio-user col-sm-6 col-md-4 col-lg-4">
-                    
-                    <div class="our-team" style="border-radius: 10px;">
-                      
+                  <div
+                    class="col-12 p-0 m-3 radio radio-page col-sm-6 col-md-4 col-lg-4"
+                  >
+                    <div class="our-team" style="border-radius: 10px">
                       <div class="picture">
-                        <img
-                          class="img-fluid"
-                          src="assets/img/user-user.png"
-                        />
-                      </div>
-                      <div class="team-content">
-                        <h3 class="name">Lê Việt Cường</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-12 p-0 m-3 radio radio-page col-sm-6 col-md-4 col-lg-4">
-                    <div class="our-team" style="border-radius: 10px;">
-                      <div class="picture">
-                        <img
-                          class="img-fluid"
-                          src="assets/img/user-page.png"
-                        />
+                        <img class="img-fluid" src="assets/img/user-page.png" />
                       </div>
                       <div class="team-content">
                         <h3 class="name">Boatman</h3>
                       </div>
-
                     </div>
                   </div>
                 </div>
