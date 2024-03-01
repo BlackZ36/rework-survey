@@ -13,6 +13,7 @@ $(document).ready(function () {
   joystick.one("click", function () {
     var quotes = [
         "Chúc mừng bạn đã trúng một phần quà may mắn của BOATMAN"
+        ]
 
 	var randomIndex = Math.floor(Math.random() * quotes.length); // Chọn một index ngẫu nhiên trong mảng
     var randomQuote = quotes[randomIndex]; // Lấy ra dòng chữ tại index được chọn
