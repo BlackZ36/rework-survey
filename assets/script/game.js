@@ -12,10 +12,7 @@ $(document).ready(function () {
   var joystick = $("#joystick, #greenButton");
   joystick.one("click", function () {
     var quotes = [
-        "Chúc bạn may mắn lần sau",
-        "Trúng 1 cái but",
-        "Trúng 1 quyển vở",
-        "Trúng mánh"
+      "Chúc mừng bạn đã trúng một phần quà may mắn của BOATMAN"
     ];
 
 	var randomIndex = Math.floor(Math.random() * quotes.length); // Chọn một index ngẫu nhiên trong mảng
