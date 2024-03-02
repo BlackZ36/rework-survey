@@ -3,14 +3,14 @@ function validate1(val) {
   v2 = document.getElementById("parentEmail");
   v3 = document.getElementById("parentPhone");
   v4 = document.getElementById("childName");
-  v5 = document.getElementById("childYob");
-  v6 = document.getElementById("childPhone");
-  v7 = document.getElementById("city");
-  v8 = document.getElementById("school");
-  v9 = document.getElementById("lop");
+  // v5 = document.getElementById("childYob");
+  v5 = document.getElementById("childPhone");
+  v6 = document.getElementById("city");
+  v7 = document.getElementById("school");
+  v8 = document.getElementById("lop");
  
-  v10 = document.getElementById("content");
-  v11 = document.getElementById("consultant");
+  v9 = document.getElementById("content");
+  v10 = document.getElementById("consultant");
 
   flag1 = true;
   flag2 = true;
@@ -22,7 +22,7 @@ function validate1(val) {
   flag8 = true;
   flag9 = true;
   flag10 = true;
-  flag11 = true;
+  // flag11 = true;
 
   if (val >= 1 || val == 0) {
     if (v1.value == "") {
@@ -121,15 +121,15 @@ function validate1(val) {
       flag10 = true;
     }
   }
-  if (val >= 11 || val == 0) {
-    if (v11.value == "") {
-      v11.style.borderColor = "red";
-      flag11 = false;
-    } else {
-      v11.style.borderColor = "green";
-      flag11 = true;
-    }
-  }
+  // if (val >= 11 || val == 0) {
+  //   if (v11.value == "") {
+  //     v11.style.borderColor = "red";
+  //     flag11 = false;
+  //   } else {
+  //     v11.style.borderColor = "green";
+  //     flag11 = true;
+  //   }
+  // }
   flag =
     flag1 &&
     flag2 &&
@@ -140,8 +140,8 @@ function validate1(val) {
     flag7 &&
     flag8 &&
     flag9 &&
-    flag10 &&
-    flag11;
+    flag10;
+    //  && flag11;
   return flag;
 }
 
