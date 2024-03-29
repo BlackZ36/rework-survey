@@ -10,7 +10,6 @@ function validate1(val) {
   v8 = document.getElementById("lop");
  
   v9 = document.getElementById("content");
-  v10 = document.getElementById("consultant");
 
   flag1 = true;
   flag2 = true;
@@ -21,7 +20,7 @@ function validate1(val) {
   flag7 = true;
   flag8 = true;
   flag9 = true;
-  flag10 = true;
+  // flag10 = true;
   // flag11 = true;
 
   if (val >= 1 || val == 0) {
@@ -112,15 +111,7 @@ function validate1(val) {
     }
   }
 
-  if (val >= 10 || val == 0) {
-    if (v10.value == "") {
-      v10.style.borderColor = "red";
-      flag10 = false;
-    } else {
-      v10.style.borderColor = "green";
-      flag10 = true;
-    }
-  }
+
   // if (val >= 11 || val == 0) {
   //   if (v11.value == "") {
   //     v11.style.borderColor = "red";
@@ -139,8 +130,7 @@ function validate1(val) {
     flag6 &&
     flag7 &&
     flag8 &&
-    flag9 &&
-    flag10;
+    flag9;
     //  && flag11;
   return flag;
 }
